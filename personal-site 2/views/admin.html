@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+<!-- شاشة تسجيل الدخول -->
+<section id="login-screen" class="login-screen">
+  <form id="login-form" class="login-box">
+    <h1>لوحة التحكم</h1>
+    <p class="hint">هذه الصفحة خاصة بمالك الموقع فقط.</p>
+    <input id="login-password" type="password" placeholder="كلمة المرور" autocomplete="current-password" required>
+    <button type="submit">دخول</button>
+    <p id="login-error" class="error"></p>
+  </form>
+</section>
+
+<!-- لوحة التحكم -->
+<div id="dashboard" class="dashboard hidden">
+
+  <header class="topbar">
+    <h1>لوحة التحكم</h1>
+    <div class="topbar-actions">
+      <span id="save-status" class="save-status"></span>
+      <button id="save-btn" class="btn primary">حفظ التغييرات</button>
+      <button id="logout-btn" class="btn ghost">تسجيل الخروج</button>
+    </div>
+  </header>
+
+  <main class="panels">
+
+    <!-- الملف الشخصي -->
+    <section class="panel">
+      <h2>الملف الشخصي</h2>
+
+      <div class="field-row">
+        <label>الصورة الشخصية (Avatar)</label>
+        <div class="upload-row">
+          <img id="avatar-preview" class="preview-avatar" alt="">
+          <input type="file" id="avatar-input" accept="image/*">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <label>صورة الغلاف (Banner)</label>
+        <div class="upload-row">
+          <div id="banner-preview" class="preview-banner"></div>
+          <input type="file" id="banner-input" accept="image/*">
+        </div>
+      </div>
+
+      <div class="field-row">
+        <label for="display-name-input">الاسم الظاهر</label>
+        <input type="text" id="display-name-input" maxlength="60">
+      </div>
+
+      <div class="field-row">
+        <label for="status-input">حالة الاتصال</label>
+        <input type="text" id="status-input" maxlength="40" placeholder="مثال: متصل الآن">
+      </div>
+
+      <div class="field-row">
+        <label for="bio-input">النبذة التعريفية</label>
+        <textarea id="bio-input" rows="3" maxlength="280"></textarea>
+      </div>
+    </section>
+
+    <!-- الألوان -->
+    <section class="panel">
+      <h2>ألوان الموقع (تدرج من الأعلى للأسفل)</h2>
+      <div class="color-grid">
+        <div class="color-field">
+          <label for="color-top">أعلى التدرج</label>
+          <input type="color" id="color-top">
+        </div>
+        <div class="color-field">
+          <label for="color-middle">منتصف التدرج</label>
+          <input type="color" id="color-middle">
+        </div>
+        <div class="color-field">
+          <label for="color-bottom">أسفل التدرج</label>
+          <input type="color" id="color-bottom">
+        </div>
+        <div class="color-field">
+          <label for="color-accent">لون التمييز (الأزرار والحدود)</label>
+          <input type="color" id="color-accent">
+        </div>
+      </div>
+      <div id="gradient-preview" class="gradient-preview"></div>
+    </section>
+
+    <!-- حسابات التواصل -->
+    <section class="panel">
+      <h2>حسابات التواصل الاجتماعي</h2>
+      <p class="panel-hint">تظهر كأيقونات دائرية تحت صورتك الشخصية. اختر أيقونة، أدخل الرابط، وسمّها.</p>
+      <div id="socials-list" class="items-list"></div>
+      <button id="add-social-btn" class="btn dashed">+ إضافة حساب</button>
+    </section>
+
+    <!-- المشاريع -->
+    <section class="panel">
+      <h2>المشاريع السابقة</h2>
+      <div id="projects-list" class="items-list"></div>
+      <button id="add-project-btn" class="btn dashed">+ إضافة مشروع</button>
+    </section>
+
+  </main>
+</div>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>

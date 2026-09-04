@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "displayName": "اسمك هنا",
+    "bio": "اكتب نبذة قصيرة عنك هنا... يظهر هذا النص تحت اسمك مباشرة.",
+    "status": "متصل الآن",
+    "avatar": "/uploads/default-avatar.svg",
+    "banner": "/uploads/default-banner.svg"
+  },
+  "theme": {
+    "gradientTop": "#1b1f2a",
+    "gradientMiddle": "#12141c",
+    "gradientBottom": "#0a0b0f",
+    "accent": "#6c7bff"
+  },
+  "socials": [
+    {
+      "id": "s1",
+      "label": "تويتر / X",
+      "url": "https://twitter.com/",
+      "icon": "/uploads/default-icon-twitter.svg"
+    },
+    {
+      "id": "s2",
+      "label": "انستقرام",
+      "url": "https://instagram.com/",
+      "icon": "/uploads/default-icon-instagram.svg"
+    },
+    {
+      "id": "s3",
+      "label": "ديسكورد",
+      "url": "https://discord.com/",
+      "icon": "/uploads/default-icon-discord.svg"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "title": "اسم المشروع الأول",
+      "description": "وصف مختصر لهذا المشروع، وماذا يفعل، والتقنيات المستخدمة فيه.",
+      "image": "/uploads/default-project.svg",
+      "link": "https://example.com"
+    }
+  ]
+}
